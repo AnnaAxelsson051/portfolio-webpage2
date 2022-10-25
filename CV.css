@@ -1,0 +1,289 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  /*equals 10px*/
+  font-size: 68%;
+}
+
+body,
+html {
+  min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background: linear-gradient(to bottom, #023e8a, #03045e, #0077b6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+h1 {
+  color: #e6f5f9;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  font-family: "Pinyon script";
+  text-align: center;
+  padding: 3rem;
+}
+
+h3 {
+  padding-bottom: 1rem;
+}
+
+h4 {
+  padding-top: 3rem;
+}
+
+body {
+  font-family: "Raleway";
+  margin: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 11rem 5.5rem 5.5rem 5.5rem 5.5rem 5.5rem 21rem auto auto 1.5rem;
+  grid-template-areas:
+    "header"
+    "nav"
+    "nav"
+    "nav"
+    "nav"
+    "nav"
+    "div"
+    "aside"
+    "main"
+    "footer";
+}
+
+.menu-icon {
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  left: 93%;
+  bottom: 6%;
+  display: block;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #00b4d8;
+  background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
+}
+
+.main-nav-list a {
+  color: white;
+  /*padding: 14px 16px;*/
+  padding: 1.6rem 1.6rem;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Raleway";
+  text-align: center;
+  display: block;
+}
+
+.main-nav-link:hover {
+  color: #80ed99;
+  transform: translateY(-3px);
+  /*så den åker upp lite när man hovrar*/
+  transition: 1s;
+}
+
+.summary {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.849),
+      rgba(255, 255, 255, 0.849)
+    ),
+    url(intro8.jpg);
+  transition: all 2s;
+}
+
+.summary:hover {
+  /* background-image: linear-gradient(to right, #f6f4f0b6, #f6f4f0ce),
+    url(strip.png);*/
+  filter: brightness(1.1);
+}
+.cv {
+  padding: 0.8rem;
+  border-radius: 10px 100px / 120px;
+  border: 2.5px solid #80ed999f;
+  border: 2.5px solid #5df07f9f;
+  background-color: #e6f5f936;
+}
+
+.cv:hover {
+  color: white;
+}
+
+div,
+aside,
+main {
+  padding: 2rem;
+  font-size: 1.8rem;
+  box-shadow: 1px 1px 50px #cccccc;
+}
+
+div {
+  grid-area: div;
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+aside {
+  grid-area: aside;
+  text-align: center;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  box-shadow: 0 2.4rem 4;
+}
+
+main {
+  grid-area: main;
+  min-height: 60vh;
+  /*gör den ngt?*/
+  text-align: center;
+  margin-right: 1.5rem;
+  box-shadow: 0 2.4rem 4;
+  /*font-family: "Raleway";*/
+}
+.coding {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.767),
+      rgba(255, 255, 255, 0.726)
+    ),
+    url(tech6.jpeg);
+  transition: all 3s;
+}
+.coding:hover {
+  filter: brightness(1.2);
+}
+.law {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.767),
+      rgba(255, 255, 255, 0.726)
+    ),
+    url(lawpic.jpg);
+  transition: all 3s;
+  /*law22.png*/
+}
+
+.law:hover {
+  filter: brightness(1.2);
+}
+
+.economy {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.767),
+      rgba(255, 255, 255, 0.726)
+    ),
+    url(office6.jpg);
+  transition: all 2s;
+}
+.economy:hover {
+  /*filter: invert(10);*/
+  filter: brightness(1.1);
+}
+.groceries {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.767),
+      rgba(255, 255, 255, 0.726)
+    ),
+    url(fruits3.jpg);
+  transition: all 2s;
+  /*livsmedel6*/
+}
+
+.groceries:hover {
+  filter: brightness(1.2);
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  grid-area: footer;
+  padding: 3rem;
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+}
+/*tablets*/
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 12rem 6rem 13rem auto 2rem;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "div div"
+      "aside main"
+      "footer footer";
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+  .menu-icon {
+    display: none;
+  }
+
+  nav {
+    grid-area: nav;
+  }
+
+  .main-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    padding-left: 1rem;
+  }
+
+  .main-nav-list {
+    gap: 6rem;
+    align-items: left;
+    justify-content: left;
+  }
+  nav {
+    /*padding-top: 1.7rem;*/
+    padding-bottom: 2rem;
+  }
+
+  main,
+  aside {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 992px) {
+  body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 15rem 6rem 11rem auto 2rem;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "div div"
+      "aside main"
+      "footer footer";
+  }
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+}
