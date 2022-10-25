@@ -18,25 +18,6 @@ html {
   min-height: 100vh;
 }
 
-header {
-  grid-area: header;
-  background: linear-gradient(to bottom, #023e8a, #03045e, #0077b6);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
-
-h1 {
-  color: #e6f5f9;
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 0.5rem;
-  font-family: "Pinyon script";
-  text-align: center;
-  padding: 3rem;
-}
-
 h3 {
   padding-bottom: 1rem;
 }
@@ -50,51 +31,88 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 11rem 5.5rem 5.5rem 5.5rem 5.5rem 5.5rem 21rem auto auto 1.5rem;
+  grid-template-rows: auto 21rem auto auto 1.5rem;
   grid-template-areas:
-    "header"
     "nav"
-    "nav"
-    "nav"
-    "nav"
-    "nav"
-    "div"
+    "section"
     "aside"
     "main"
     "footer";
 }
 
 .menu-icon {
-  height: 3rem;
-  width: 3rem;
+  height: 5rem;
   position: absolute;
-  left: 93%;
-  bottom: 6%;
-  display: block;
+  filter: saturate(3.2);
 }
 
-nav {
+.heading {
+  font-size: 5rem;
+  padding: 3rem;
+  font-family: "Pinyon script";
+}
+
+.navigation {
   grid-area: nav;
-  background-color: #00b4d8;
+  display: flex;
+  flex-direction: column;
+  /*background: linear-gradient(to bottom, #0b0d7e, #023e8a, #0077b6, #9fecfc);*/
+  /*background: linear-gradient(to bottom, #023e8a, #03045e, #0077b6);*/
   background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
-}
-
-.main-nav-list a {
   color: white;
-  /*padding: 14px 16px;*/
-  padding: 1.6rem 1.6rem;
-  text-decoration: none;
-  font-size: 17px;
-  font-family: "Raleway";
-  text-align: center;
-  display: block;
 }
 
-.main-nav-link:hover {
-  color: #80ed99;
-  transform: translateY(-3px);
+/*.navbar-links {
+  display: none;
+}*/
+
+.nav-links ul {
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav-links li {
+  list-style: none;
+  text-align: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1.35rem;
+  display: block;
+  font-family: "Raleway";
+  font-size: 1.4rem;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
   /*så den åker upp lite när man hovrar*/
   transition: 1s;
+  color: #80ed99;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links {
+  display: none;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 9%;
+  right: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 37px;
+  height: 26px;
+  /*width: 50px;
+  height: auto;*/
 }
 
 .summary {
@@ -114,8 +132,8 @@ nav {
 .cv {
   padding: 0.8rem;
   border-radius: 10px 100px / 120px;
+  /*border: 2.5px solid #e6f5f979;*/
   border: 2.5px solid #80ed999f;
-  border: 2.5px solid #5df07f9f;
   background-color: #e6f5f936;
 }
 
@@ -123,7 +141,7 @@ nav {
   color: white;
 }
 
-div,
+section,
 aside,
 main {
   padding: 2rem;
@@ -131,8 +149,15 @@ main {
   box-shadow: 1px 1px 50px #cccccc;
 }
 
-div {
-  grid-area: div;
+/*.economy,
+.groceries,
+.coding,
+.law {
+  font-size: 1.8rem;
+  box-shadow: 1px 1px 50px #cccccc;
+}*/
+section {
+  grid-area: section;
   text-align: center;
   margin-top: 1.5rem;
   margin-left: 1.5rem;
@@ -224,44 +249,46 @@ footer {
     margin: 0;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 12rem 6rem 13rem auto 2rem;
+    grid-template-rows: auto auto auto 2rem;
     grid-template-areas:
-      "header header"
       "nav nav"
-      "div div"
+      "section section"
       "aside main"
       "footer footer";
   }
 
-  h1 {
-    font-size: 4rem;
-  }
   .menu-icon {
     display: none;
   }
 
-  nav {
-    grid-area: nav;
-  }
-
-  .main-nav-list {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
+  .navigation {
     justify-content: space-between;
     align-items: center;
+    /*flex-direction: row;*/
     font-weight: 500;
     padding-left: 1rem;
+    background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
+    color: white;
   }
 
-  .main-nav-list {
-    gap: 6rem;
-    align-items: left;
-    justify-content: left;
+  .my-name {
+    font-size: 5rem;
+    padding-top: 2rem;
   }
-  nav {
-    /*padding-top: 1.7rem;*/
-    padding-bottom: 2rem;
+
+  .nav-links {
+    display: block;
+  }
+
+  .nav-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .toggle-button {
+    display: none;
   }
 
   main,
@@ -274,16 +301,15 @@ footer {
     margin: 0;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 15rem 6rem 11rem auto 2rem;
+    grid-template-rows: auto auto auto auto 2rem;
     grid-template-areas:
-      "header header"
       "nav nav"
-      "div div"
+      "section section"
       "aside main"
       "footer footer";
   }
-  h1 {
-    font-size: 5rem;
-    text-align: center;
+  .nav-links li a {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
   }
 }

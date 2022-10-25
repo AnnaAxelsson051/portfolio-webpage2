@@ -11,34 +11,38 @@
       rel="stylesheet"
     />
     <link href="CV.css" rel="stylesheet" />
+    <script src="home.js" defer></script>
     <title>CV</title>
   </head>
   <body>
-    <header>
-      <h1>Academic- and work achievenemnts</h1>
-      <img src="menu-icon.png" alt="menu-icon" class="menu-icon" />
-    </header>
-    <nav class="main-nav">
-      <ul class="main-nav-list">
-        <li class="mobile-menu-button">
-          <a class="main-nav-link" href="index.html">HOME</a>
-        </li>
-        <li class="mobile-menu-button">
-          <a class="main-nav-link" href="presentation.html">PRESENTATION</a>
-        </li>
-        <li class="mobile-menu-button">
-          <a class="main-nav-link cv" href="CV.html">CV</a>
-        </li>
-        <li class="mobile-menu-button">
-          <a class="main-nav-link" href="projects.html">PROJECTS</a>
-        </li>
-        <li class="mobile-menu-button">
-          <a class="main-nav-link" href="contact.html">CONTACT</a>
-        </li>
-      </ul>
+    <nav class="navigation">
+      <div class="heading">Academic- and work achievements</div>
+      <a href="#" class="toggle-button">
+        <img src="menu-icon.png" alt="menu-icon" class="menu-icon" />
+      </a>
+
+      <div class="nav-links">
+        <ul>
+          <li>
+            <a href="index.html">HOME</a>
+          </li>
+          <li>
+            <a href="presentation.html">PRESENTATION</a>
+          </li>
+          <li>
+            <a class="cv" href="CV.html">CV</a>
+          </li>
+          <li>
+            <a href="projects.html">PROJECTS</a>
+          </li>
+          <li>
+            <a href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
-    <div class="summary">
+    <section class="summary">
       <p>
         Creative and analytical programmer with good problemsolving as well as
         communication skills. With educations including .NET Fullstack and Java
@@ -46,7 +50,7 @@
         knowledge in C#/.Net, Java, Javascript, Html and Css as well as Python
         (as a hobby project).
       </p>
-    </div>
+    </section>
 
     <main>
       <!--<h2 class="work-life">Work life experience</h2>-->

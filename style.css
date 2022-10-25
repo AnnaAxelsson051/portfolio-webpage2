@@ -1,8 +1,6 @@
 *,
 *::after,
 *::before {
-  /*aplies to all elements: 
-  sets all margins and paddings to a default 0*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,81 +17,100 @@ html {
   min-height: 100vh;
 }
 
-header {
-  grid-area: header;
-  background: linear-gradient(to bottom, #023e8a, #03045e, #0077b6);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
-
-h1 {
-  color: #e6f5f9;
-  font-size: 5rem;
-  font-weight: 400;
-  letter-spacing: 0.5rem;
-  font-family: "Pinyon script";
-  text-align: left;
-  padding: 6rem;
-}
-
 body {
   margin: 0;
   display: grid;
   /*min-height: 100vh;*/
   grid-template-columns: 100%;
-  grid-template-rows: 14rem 5.5rem 5.5rem 5.5rem 5.5rem 5.5rem auto 1.5rem;
+  grid-template-rows: auto auto 1.5rem;
   grid-template-areas:
-    "header"
-    "nav"
-    "nav"
-    "nav"
-    "nav"
     "nav"
     "main"
     "footer";
 }
 
 .menu-icon {
-  height: 3rem;
-  width: 3rem;
+  height: 5rem;
   position: absolute;
-  left: 93%;
-  bottom: 6%;
-  /*display: block;*/
+  filter: saturate(3.2);
 }
 
-nav {
+.my-name {
+  font-size: 5rem;
+  padding: 3rem;
+  font-family: "Pinyon script";
+}
+
+.navigation {
   grid-area: nav;
-  /*background-color: #00b4d8;*/
+  display: flex;
+  flex-direction: column;
+  /*background: linear-gradient(to bottom, #0b0d7e, #023e8a, #0077b6, #9fecfc);*/
+  /*background: linear-gradient(to bottom, #023e8a, #03045e, #0077b6);*/
   background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
-}
-
-.main-nav-list a {
   color: white;
-  /*padding: 14px 16px;*/
-  padding: 1.6rem 1.6rem;
-  text-decoration: none;
-  font-size: 17px;
+}
+
+/*.navbar-links {
+  display: none;
+}*/
+
+.nav-links ul {
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav-links li {
+  list-style: none;
   text-align: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1.35rem;
   display: block;
-}
-.main-nav-link {
   font-family: "Raleway";
+  font-size: 1.4rem;
 }
 
-.main-nav-list:checked {
-  max-height: 100%;
-  overflow: hidden;
-}
-
-.main-nav-link:hover {
-  transform: translateY(-3px);
+.nav-links a:hover {
+  transform: translateY(-2px);
   /*så den åker upp lite när man hovrar*/
   transition: 1s;
   color: #80ed99;
 }
+
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links {
+  display: none;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 9%;
+  right: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 37px;
+  height: 26px;
+  /*width: 50px;
+  height: auto;*/
+}
+
+/*.toggle-button .bar {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 10;
+}*/
 
 .home {
   padding: 0.8rem;
@@ -317,44 +334,48 @@ footer {
     margin: 0;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 12rem 6rem auto 2rem;
+    grid-template-rows: auto auto 2rem;
     grid-template-areas:
-      "header header"
       "nav nav"
       "main main"
       "footer footer";
   }
 
-  h1 {
+  /*h1 {
     font-size: 6rem;
-  }
+  }*/
   .menu-icon {
     display: none;
   }
 
-  .main-nav-list {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
+  .navigation {
     justify-content: space-between;
     align-items: center;
-    /*justify-content: center;*/
+    /*flex-direction: row;*/
     font-weight: 500;
     padding-left: 1rem;
+    background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
+    color: white;
   }
 
-  .main-nav-list {
-    gap: 6rem;
-    align-items: left;
-    justify-content: left;
+  .my-name {
+    font-size: 5rem;
+    padding-top: 2rem;
   }
 
-  h1 {
-    text-align: left;
+  .nav-links {
+    display: block;
   }
 
-  h2 {
-    margin-bottom: 2rem;
+  .nav-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .toggle-button {
+    display: none;
   }
 
   .text-on-pic {
@@ -433,15 +454,19 @@ footer {
     margin: 0;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 15rem 6rem auto 2rem;
+    grid-template-rows: auto auto 2rem;
     grid-template-areas:
-      "header header"
       "nav nav"
       "main main"
       "footer footer";
   }
   h1 {
     font-size: 7rem;
+  }
+
+  .nav-links li a {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
   }
   /*moving symbols*/
   .symbol-css {

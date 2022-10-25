@@ -17,16 +17,16 @@ html {
   min-height: 100vh;
 }
 
-header {
+/*header {
   grid-area: header;
   background: linear-gradient(to bottom, #023e8a, #03045e, #0077b6);
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-}
+}*/
 
-h1 {
+/*h1 {
   color: #e6f5f9;
   font-size: 5rem;
   font-weight: 400;
@@ -34,56 +34,98 @@ h1 {
   font-family: "Pinyon script";
   text-align: center;
   padding: 3rem;
-}
+}*/
 
 body {
   margin: 0;
   display: grid;
   /*min-height: 100vh;*/
   grid-template-columns: 100%;
-
-  grid-template-rows: 11rem 5.5rem 5.5rem 5.5rem 5.5rem 5.5rem auto 1.5rem;
+  grid-template-rows: auto auto 1.5rem;
   grid-template-areas:
-    "header"
-    "nav"
-    "nav"
-    "nav"
-    "nav"
     "nav"
     "main"
     "footer";
 }
 
 .menu-icon {
-  height: 3rem;
-  width: 3rem;
+  height: 5rem;
   position: absolute;
-  left: 93%;
-  bottom: 6%;
+  filter: saturate(3.2);
 }
 
-nav {
+.heading {
+  font-size: 5rem;
+  padding: 3rem;
+  font-family: "Pinyon script";
+}
+
+.navigation {
   grid-area: nav;
-  background-color: #00b4d8;
+  display: flex;
+  flex-direction: column;
+  /*background: linear-gradient(to bottom, #0b0d7e, #023e8a, #0077b6, #9fecfc);*/
+  /*background: linear-gradient(to bottom, #023e8a, #03045e, #0077b6);*/
   background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
+  color: white;
 }
 
-.main-nav-list a {
-  color: white;
-  padding: 1.6rem 1.6rem;
-  text-decoration: none;
-  font-size: 17px;
+.nav-links ul {
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav-links li {
+  list-style: none;
   text-align: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1.35rem;
   display: block;
   font-family: "Raleway";
+  font-size: 1.4rem;
 }
 
-.main-nav-link:hover {
-  transform: translateY(-3px);
+.nav-links a:hover {
+  transform: translateY(-2px);
   /*så den åker upp lite när man hovrar*/
   transition: 1s;
   color: #80ed99;
 }
+
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links {
+  display: none;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 9%;
+  right: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 37px;
+  height: 26px;
+  /*width: 50px;
+  height: auto;*/
+}
+
+/*.toggle-button .bar {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 10;
+}*/
 
 .my-pic3 {
   display: none;
@@ -95,12 +137,6 @@ nav {
 .my-pic2 {
   height: 25rem;
   width: 25rem;
-}
-
-.text-and-pic2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .presentation {
@@ -119,7 +155,11 @@ nav {
   padding-left: 20rem;
   display: none;
 }
-
+.text-and-pic2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 main {
   font-size: 1.8rem;
   box-shadow: 1px 1px 50px #cccccc;
@@ -162,33 +202,48 @@ footer {
     margin: 0;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 12rem 6rem auto 2rem;
+    grid-template-rows: auto auto 2rem;
     grid-template-areas:
-      "header header"
       "nav nav"
       "main main"
       "footer footer";
   }
 
-  h1 {
+  /*h1 {
     font-size: 6rem;
-  }
+  }*/
   .menu-icon {
     display: none;
   }
 
-  .main-nav-list {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
+  .navigation {
     justify-content: space-between;
+    align-items: center;
+    /*flex-direction: row;*/
+    font-weight: 500;
     padding-left: 1rem;
+    background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
+    color: white;
   }
 
-  .main-nav-list {
-    gap: 6rem;
-    align-items: left;
-    justify-content: left;
+  .heading {
+    font-size: 5rem;
+    padding-top: 2rem;
+  }
+
+  .nav-links {
+    display: block;
+  }
+
+  .nav-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .toggle-button {
+    display: none;
   }
 
   h2 {
@@ -228,16 +283,19 @@ footer {
     margin: 0;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 15rem 6rem auto 2rem;
+    grid-template-rows: auto auto 2rem;
     grid-template-areas:
-      "header header"
       "nav nav"
       "main main"
       "footer footer";
   }
 
-  .main-nav-list {
+  /*.main-nav-list {
     align-items: center;
+  }*/
+  .nav-links li a {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
   }
 
   h1 {
