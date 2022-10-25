@@ -17,7 +17,7 @@ html {
   min-height: 100vh;
 }
 
-header {
+/*header {
   grid-area: header;
   background: linear-gradient(to bottom, #023e8a, #03045e, #0077b6);
   display: flex;
@@ -33,23 +33,17 @@ h1 {
   letter-spacing: 0.5rem;
   font-family: "Pinyon script";
   text-align: center;
-  /*padding: 3rem;*/
   padding: 3rem;
-}
+}*/
 
 body {
   margin: 0;
   display: grid;
   /*min-height: 100vh;*/
   grid-template-columns: 100%;
-  grid-template-rows: 11rem 5.5rem 5.5rem 5.5rem 5.5rem 5.5rem auto auto auto 1.5rem;
+  grid-template-rows: auto auto auto auto 1.5rem;
 
   grid-template-areas:
-    "header"
-    "nav"
-    "nav"
-    "nav"
-    "nav"
     "nav"
     "main"
     "aside"
@@ -58,44 +52,14 @@ body {
 }
 
 .menu-icon {
-  height: 3rem;
-  width: 3rem;
+  height: 5rem;
   position: absolute;
-  left: 93%;
-  bottom: 6%;
-  /*display: block;*/
+  filter: saturate(3.2);
 }
-
-nav {
-  grid-area: nav;
-  /*background-color: #00b4d8;*/
-  background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
-}
-
-.main-nav-list a {
-  color: white;
-  /*padding: 14px 16px;*/
-  padding: 1.6rem 1.6rem;
-  text-decoration: none;
-  font-size: 17px;
-  text-align: center;
-  display: block;
-}
-
-.main-nav-link {
-  font-family: "Raleway";
-}
-
-.main-nav-list:checked {
-  max-height: 100%;
-  overflow: hidden;
-}
-
-.main-nav-link:hover {
-  transform: translateY(-3px);
-  /*så den åker upp lite när man hovrar*/
-  transition: 1s;
-  color: #80ed99;
+.heading {
+  font-size: 5rem;
+  padding: 3rem;
+  font-family: "Pinyon script";
 }
 
 .projects {
@@ -108,6 +72,69 @@ nav {
 
 .projects:hover {
   color: white;
+}
+
+.navigation {
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  /*background: linear-gradient(to bottom, #0b0d7e, #023e8a, #0077b6, #9fecfc);*/
+  /*background: linear-gradient(to bottom, #023e8a, #03045e, #0077b6);*/
+  background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
+  color: white;
+}
+
+/*.navbar-links {
+  display: none;
+}*/
+
+.nav-links ul {
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav-links li {
+  list-style: none;
+  text-align: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1.35rem;
+  display: block;
+  font-family: "Raleway";
+  font-size: 1.4rem;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  /*så den åker upp lite när man hovrar*/
+  transition: 1s;
+  color: #80ed99;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links {
+  display: none;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 9%;
+  right: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 37px;
+  height: 26px;
+  /*width: 50px;
+  height: auto;*/
 }
 
 aside {
@@ -307,9 +334,8 @@ footer {
     margin: 0;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 12rem 6rem auto auto auto 2rem;
+    grid-template-rows: auto auto auto auto 2rem;
     grid-template-areas:
-      "header header"
       "nav nav"
       "main main"
       "aside aside"
@@ -325,22 +351,34 @@ footer {
     display: none;
   }
 
-  .main-nav-list {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
+  .navigation {
     justify-content: space-between;
     align-items: center;
+    /*flex-direction: row;*/
     font-weight: 500;
     padding-left: 1rem;
+    background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
+    color: white;
   }
 
-  .main-nav-list {
-    gap: 6rem;
-    justify-content: left;
+  .my-name {
+    font-size: 5rem;
+    padding-top: 2rem;
   }
-  nav {
-    padding-bottom: 2rem;
+
+  .nav-links {
+    display: block;
+  }
+
+  .nav-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .toggle-button {
+    display: none;
   }
 
   h2 {
@@ -383,14 +421,17 @@ footer {
     grid-template-columns: auto;
     /*side och ads*/
 
-    grid-template-rows: 15rem 6rem auto auto auto 2rem;
+    grid-template-rows: auto auto auto auto 2rem;
     grid-template-areas:
-      "header header"
       "nav nav"
       "main main"
       "aside aside"
       "section section"
       "footer footer";
+  }
+  .nav-links li a {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
   }
 
   .my-projects {
