@@ -114,6 +114,76 @@ h2 {
   padding-bottom: 3rem;
 }
 
+.contact-me-btn {
+  background-image: linear-gradient(to bottom, #c1b193, #a69064);
+  padding: 1rem;
+  position: absolute;
+  right: 45%;
+  top: 20.8%;
+}
+
+.contact-me-btn:hover {
+  background-image: linear-gradient(to bottom, #f6f4f0ba, #f6f4f00b, #f6f4f00b);
+  background-color: #20c997;
+  color: white;
+  transition: 2s;
+}
+
+.modal {
+  position: fixed;
+  /*så att modalen följer med när man scrollar*/
+  top: 50%;
+  left: 50%;
+  /*Sätter den i nedere hägra hörnet refererar till 50% av skärmen*/
+  transform: translate(-50%, -50%) scale(0);
+  /*centrerar den till mitten, korresponderar till stiorleen av kontainern dvs modalen*/
+  /*scale 0 so that it is invisible*/
+  transition: 200ms ease-in-out;
+  /*så att den fadear in o ut*/
+  border: 1px solid black;
+  z-index: 5;
+  border-radius: 5px;
+  background-color: white;
+  width: 1200px;
+  max-width: 95%;
+  /*så att de alltid är 80% av skärmen*/
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  /*so that it is visible when active*/
+}
+
+.modal-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#overlay {
+  position: fixed;
+  /*opacity:0;
+  /*så att grundläget är att den inte syns*/
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*gör att den täcker hela*/
+  /*background-color: rgba(0, 0, 0, 0.295);*/
+  pointer-events: none;
+  /*så att när ovelay är osymlig så att overlay inte kommmer ta åt sig våra klick events*/
+  transition: 200ms ease-in-out;
+  /*så att den fadear in o ut*/
+}
+
+#overlay.active {
+  pointer-events: all;
+  /*in here we wanna actually capture pointer events*/
+  opacity: 1;
+  /*på det sättet kan vi toggle o untoggle vårt overlay*/
+}
+
 .contact-section1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -299,6 +369,11 @@ footer {
     display: none;
   }
 
+  .contact-me-btn {
+    right: 9%;
+    top: 26.2%;
+  }
+
   .contact-section1 {
     column-gap: 4rem;
     width: auto;
@@ -348,12 +423,17 @@ footer {
     font-size: 1.7rem;
     margin-bottom: 1rem;
   }
+
+  .contact-me-btn {
+    right: 12%;
+    top: 28.2%;
+  }
   .contact-form {
     width: 75%;
     padding: 6rem;
   }
   .field-4 {
-    width: 900px;
+    width: 870px;
   }
 
   h1 {
