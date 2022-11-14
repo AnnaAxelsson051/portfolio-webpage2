@@ -11,6 +11,7 @@
     />
     <link href="projects.css" rel="stylesheet" />
     <script src="projects.js" defer></script>
+    <script src="projects2.js" defer></script>
     <!--defer means it loads after html-->
     <title><h1>Projects</h1></title>
   </head>
@@ -34,7 +35,15 @@
       </nav>
 
     <main>
-        <div class="my-projects my-projects-law">
+      <h1>Public repos with Api loading from GitHub:</h1>
+    <button id="myBtn" onclick="loadRepos">Fetch repos</button>
+    
+    <ul class="myList">
+        <!--when button is clicked display below, using js-->
+      <li class="list">Loading.... Please wait while I fetch the repos</li>
+      <!-- för error hantering VG-->
+      <div class="loader"></div>
+        <!--<div class="my-projects my-projects-law">
       
 
           <div aria-label="photos-law">
@@ -50,13 +59,13 @@
             </ul>
           </div>
           </div>
-          <!--end test-->
+         
            
   
             <div class="describing">
         <h2>Law website</h2><p class="describing-text">This is a law website I have built using Html, Css and Javascript with extensive information regarding swedish testament law. The user is able to navigate between different topics and click to read more about each subject. This site includes information regarding how a persons belongings is distributed after death, what requirements there are when it comes to writing a legally valid will, what the rules and principles are surrounding emergency wills, how to retract a will, what makes a will legally invalid and under what circumstances it is possible to loose the right to inherit from a will as well as much more. This website is not final and planned to later also include back end with a search function, a database with interesting precedents (cases) and more.</p><a href="#"  class="read-more-btn btn-blue">READ MORE</a></div>
         </section>
-    
+      -->
     </main>
     
     <aside><div class="my-projects my-projects-haj">
