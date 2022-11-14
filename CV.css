@@ -18,12 +18,8 @@ html {
   min-height: 100vh;
 }
 
-h3 {
-  padding-bottom: 1rem;
-}
-
-h4 {
-  padding-top: 3rem;
+h1 {
+  font-size: 3rem;
 }
 
 body {
@@ -35,8 +31,6 @@ body {
   grid-template-areas:
     "nav"
     "section"
-    "aside"
-    "main"
     "footer";
 }
 
@@ -115,20 +109,6 @@ body {
   height: auto;*/
 }
 
-.summary {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.849),
-      rgba(255, 255, 255, 0.849)
-    ),
-    url(intro8.jpg);
-  transition: all 2s;
-}
-
-.summary:hover {
-  /* background-image: linear-gradient(to right, #f6f4f0b6, #f6f4f0ce),
-    url(strip.png);*/
-  filter: brightness(1.1);
-}
 .cv {
   padding: 0.8rem;
   border-radius: 10px 100px / 120px;
@@ -141,12 +121,14 @@ body {
   color: white;
 }
 
-section,
-aside,
-main {
+section {
   padding: 2rem;
   font-size: 1.8rem;
   box-shadow: 1px 1px 50px #cccccc;
+}
+
+.myList {
+  background-color: red;
 }
 
 /*.economy,
@@ -163,78 +145,6 @@ section {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
-}
-
-aside {
-  grid-area: aside;
-  text-align: center;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  box-shadow: 0 2.4rem 4;
-}
-
-main {
-  grid-area: main;
-  min-height: 60vh;
-  /*gör den ngt?*/
-  text-align: center;
-  margin-right: 1.5rem;
-  box-shadow: 0 2.4rem 4;
-  /*font-family: "Raleway";*/
-}
-.coding {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.767),
-      rgba(255, 255, 255, 0.726)
-    ),
-    url(tech6.jpeg);
-  transition: all 3s;
-}
-.coding:hover {
-  filter: brightness(1.2);
-}
-.law {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.767),
-      rgba(255, 255, 255, 0.726)
-    ),
-    url(lawpic.jpg);
-  transition: all 3s;
-  /*law22.png*/
-}
-
-.law:hover {
-  filter: brightness(1.2);
-}
-
-.economy {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.767),
-      rgba(255, 255, 255, 0.726)
-    ),
-    url(office6.jpg);
-  transition: all 2s;
-}
-.economy:hover {
-  /*filter: invert(10);*/
-  filter: brightness(1.1);
-}
-.groceries {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.767),
-      rgba(255, 255, 255, 0.726)
-    ),
-    url(fruits3.jpg);
-  transition: all 2s;
-  /*livsmedel6*/
-}
-
-.groceries:hover {
-  filter: brightness(1.2);
-}
-
-ul {
-  list-style: none;
 }
 
 footer {
@@ -289,11 +199,6 @@ footer {
 
   .toggle-button {
     display: none;
-  }
-
-  main,
-  aside {
-    text-align: left;
   }
 }
 @media screen and (min-width: 992px) {

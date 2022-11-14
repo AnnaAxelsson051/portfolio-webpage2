@@ -1,0 +1,29 @@
+{
+  "employment": [
+    {
+      "heading": "2017-2018 Nova hemtjänst",
+      "text": "Vårdgivare, extrajobb"
+    },
+    {
+      "heading": "2013-2016 Aleris hemtjänst",
+      "text": "Vårdgivare, extrajobb"
+    },
+    {
+      "heading": "2005-2014 Cupita Transport AB",
+      "text": "Ekonomiansvarig"
+    },
+
+    {
+      "heading": "2000-2004 Sabis/Hemköp",
+      "text": "Avdelningsansvarig frukt och mejeri"
+    }
+  ],
+  "education": [
+    "2022-2024 .NET Fullstack, Chas Academy",
+    "2022-2024 .Javautvecklare, It-högskolan",
+    "2021-2022 Onlinekurser i programmering, Udemy",
+    "2021 Offentlig upphandling 15hp, Stockholms univeristet",
+    "2016-2021 Juristexamen, 270hp, Stockholms universitet",
+    "1997-1999 Företagsekonomiskt gymnasieprogram, Fredrika Bremergymnasiet"
+  ]
+}
