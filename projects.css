@@ -215,6 +215,7 @@ button {
 .my-projects-java {
   background: linear-gradient(to bottom, #686969, #1e1f20, #020202);
   background: linear-gradient(to bottom, #73dbf0, #359fd8, #0096c7);
+  background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
 }
 
 h2 {
@@ -273,11 +274,14 @@ h2 {
   box-shadow: 0 5px 10px #110e0a6b;
 }
 .carousel {
-  height: 320px;
-  width: 480px;
+  /*height: 320px;*/
+  height: 627px;
+  /*width: 480px;*/
+  width: 798px;
+  /*border: 1px solid black;*/
   position: relative;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
-  border: solid 2px white;
+  /*border: solid 2px white;*/
 }
 
 .slide {
@@ -429,8 +433,11 @@ footer {
   }
 
   .carousel {
-    height: 395px;
-    width: 710px;
+    /* height: 395px;
+    width: 710px;*/
+    height: 627px;
+    /*width: 480px;*/
+    width: 798px;
     position: relative;
   }
   .previous {
@@ -477,8 +484,11 @@ footer {
   }
 
   .carousel {
-    height: 545px;
-    width: 880px;
+    /*height: 545px;
+    width: 880px;*/
+    height: 627px;
+    /*width: 480px;*/
+    width: 798px;
     position: relative;
   }
   .previous {
