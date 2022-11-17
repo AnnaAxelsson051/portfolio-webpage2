@@ -23,7 +23,7 @@ async function getCVData() {
     //om det gick bra plocka ut jsonbodyn ur svaret
     let cvData = await response.json();
     //svaret hamnar i cv data som innehåller 3 keys
-    loadingStatus.innerText = "";
+    myList.innerText = "";
 
     console.log("employment");
     const cvDataKeys = Object.keys(cvData);
@@ -43,3 +43,4 @@ async function getCVData() {
     });
   }
 }
+getCVData();
