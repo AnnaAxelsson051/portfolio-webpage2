@@ -128,7 +128,7 @@ section {
 }
 
 .myList {
-  background-color: red;
+  box-shadow: 1px 1px 50px #cccccc;
 }
 
 /*.economy,

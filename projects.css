@@ -51,6 +51,13 @@ body {
     "footer";
 }
 
+h1 {
+  font-size: 2rem;
+  /*padding: 5rem;*/
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 .menu-icon {
   height: 5rem;
   position: absolute;
@@ -275,9 +282,9 @@ h2 {
 }
 .carousel {
   /*height: 320px;*/
-  height: 627px;
+  height: 307px;
   /*width: 480px;*/
-  width: 798px;
+  width: 478px;
   /*border: 1px solid black;*/
   position: relative;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
@@ -380,9 +387,12 @@ footer {
   }
 
   h1 {
-    font-size: 6rem;
-    /*padding: 3.5rem;*/
+    font-size: 3rem;
+    /*padding: 5rem;*/
+    text-align: center;
+    margin-bottom: 2rem;
   }
+
   .menu-icon {
     display: none;
   }
@@ -422,7 +432,7 @@ footer {
   }
 
   .my-projects {
-    height: 900px;
+    height: 1100px;
     margin: 50px auto;
     padding: 20px;
     display: flex;
@@ -474,7 +484,7 @@ footer {
   }
 
   .my-projects {
-    height: 1000px;
+    height: 1100px;
     margin: 50px auto;
     padding: 20px;
     display: flex;
@@ -498,8 +508,9 @@ footer {
   }
 
   h1 {
-    font-size: 7rem;
+    font-size: 3rem;
     /*padding: 5rem;*/
     text-align: center;
+    margin-bottom: 2rem;
   }
 }
