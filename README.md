@@ -2,6 +2,5 @@
 
 Skapad av Anna Axelsson
 
-[I'm an inline-style link](https://www.google.com)
+[Link to published site](https://annaaxelsson051.github.io/portfolio-webpage2/)
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
