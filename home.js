@@ -8,3 +8,5 @@ toggleButton.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 //add an eventlistener and say whenever this is clicked add the class active if its not already there and if there remove it
+
+/************ MODAL */

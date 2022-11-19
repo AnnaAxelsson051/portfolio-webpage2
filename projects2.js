@@ -1,4 +1,4 @@
-//knapp som man ska trycka på
+/*//knapp som man ska trycka på
 //för att ladda repos:
 
 const url = "https://api.github.com/users/AnnaAxelsson051/repos";
@@ -16,8 +16,7 @@ myBtn.addEventListener("click", async function (e) {
   if (response.ok) {
     let json = await response.json();
     myList.innerHTML = ``;
-    //tömmer spinner
-    //eller om det är en spinner sätta till display none
+    
     for (let i = 0; i < 4; i++) {
       console.log(json[i].html_url);
       myList.innerHTML += `<li>${json[i].html_url}<li>`;
@@ -26,26 +25,24 @@ myBtn.addEventListener("click", async function (e) {
     console.log("HTTP-Error: " + response.status);
     myList.innerHTML = ``;
     myList.innerHTML + `Sorry, was unable to load the list`;
-    //*****här kan man tex skriva in vad som ska ske om json inte kan laddas (vg uppg)
-    //så användaren vet att ngt gått fel i domen
-    //Ge dem en spinner om det tar lång tid
+  
   }
 }
 
 
 
 getData();
-
-/*//knapp som man ska trycka på
-//för att ladda repos:
+*/
 
 const url = "https://api.github.com/users/AnnaAxelsson051/repos";
+/*const url =
+  "https://api.github.com/search/repositories?q=<repo>+user:<AnnaAxelsson051>";*/
 
 const myList = document.querySelector(".myList");
 
-const myBtn = document.getElementById("myBtn");
+const myBtn = document.getElementById("repoBtn");
 
-myBtn.addEventListener("click", getData);
+repoBtn.addEventListener("click", getData);
 
 async function getData() {
   myList.innerHTML = `Please wait while I fetch the list`;
@@ -53,22 +50,15 @@ async function getData() {
   if (response.ok) {
     let json = await response.json();
     myList.innerHTML = ``;
-    //tömmer spinner
-    //eller om det är en spinner sätta till display none
-    for (let i = 0; i < 4; i++) {
+
+    for (let i = 0; i < 10; i++) {
       console.log(json[i].html_url);
       myList.innerHTML += `<li>${json[i].html_url}<li>`;
+      myList.innerHTML += `<li>${json[i].description}<li>`;
     }
   } else {
     console.log("HTTP-Error: " + response.status);
     myList.innerHTML = ``;
     myList.innerHTML + `Sorry, was unable to load the list`;
-    //*****här kan man tex skriva in vad som ska ske om json inte kan laddas (vg uppg)
-    //så användaren vet att ngt gått fel i domen
-    //Ge dem en spinner om det tar lång tid
   }
 }
-
-getData();
- 
-*/

@@ -10,6 +10,10 @@ openModalButtons.forEach((button) => {
     openModal(modal);
   });
 });
+//eventlistener för varje knapp lyssna efter klick
+//med dataset kan vi komma åt alla dataset attributen som om de va js objekt (görs om till c-case) vi väljer modalen och sen kalla på openModal funktionen
+
+//samma för close modal buttons
 
 closeModalButtons.forEach((button) => {
   button.addEventListener("click", () => {
