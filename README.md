@@ -10,5 +10,5 @@
 
 I am planning on improving the contact section of this page, amongst some other fixes.
 
-Created by Anna Axelsson*
+Created by Anna Axelsson
 
