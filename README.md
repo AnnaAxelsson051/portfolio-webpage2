@@ -8,5 +8,7 @@
 
 ![Screenshot 2022-12-19 at 01 31 27](https://user-images.githubusercontent.com/103879144/208327748-37de9a4b-2631-41e6-a218-e9a848da59f1.png)
 
+I am planning on improving the contact section of this page, amongst some other fixes.
+
 Created by Anna Axelsson
 
